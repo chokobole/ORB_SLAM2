@@ -22,6 +22,8 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
+#include <unistd.h>
+
 #include<string>
 #include<thread>
 #include<opencv2/core/core.hpp>
@@ -121,6 +123,10 @@ public:
     int GetTrackingState();
     std::vector<MapPoint*> GetTrackedMapPoints();
     std::vector<cv::KeyPoint> GetTrackedKeyPointsUn();
+
+    cv::Mat DrawCurrentFrame();
+
+    std::vector<MapPoint *> GetAllMapPoints();
 
 private:
 
